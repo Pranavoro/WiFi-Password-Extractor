@@ -4,7 +4,7 @@ import subprocess, smtplib, re
 
 
 def send_mail(email, password, message):                  #function for sending email to yourself
-    server = smtplib.SMTP("smtp.gmail.com",587)
+    server = smtplib.SMTP("smtp.gmail.com",587)           #setting up the smtp server at default port for TLS ie. 587
     server.starttls()
     server.login(email, password,)
     server.sendmail(email, email, message)                # can change sender or receivers address
