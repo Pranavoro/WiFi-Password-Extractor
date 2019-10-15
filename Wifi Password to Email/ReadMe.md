@@ -30,4 +30,4 @@ Open a cmd window at that location.
 
 cmd command to convert : pyinstaller --onefile <FILE_NAME>.py.
 
-Exploit.. XD
+# Exploit.. XD
