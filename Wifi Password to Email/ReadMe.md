@@ -1,4 +1,4 @@
-Just a casual hack.
+# Just a casual hack.
 
 
 To configure it to your email, enter the email and password in the python script file.
@@ -9,13 +9,15 @@ Then convert .py to .exe by using pyinstaller.
 
 
 
-To install pyinstaller:
+# To install pyinstaller:
 
 
 
 cmd command : pip install pyinstaller
  
 
+
+# To convert the file :
 
 
 To convert the file, go to the directory where th .py file is stored.
