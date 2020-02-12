@@ -31,3 +31,8 @@ Open a cmd window at that location.
 cmd command to convert : pyinstaller --onefile <FILE_NAME>.py.
 
 # Exploit.. XD
+
+
+# TO Run the file invisibly
+
+Using the vbs script, the executabe can be run in background.
