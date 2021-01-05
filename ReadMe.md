@@ -1,7 +1,7 @@
 # Just a casual hack.
 
 
-To configure it to your email, enter the email and password in the python script file.
+To configure it to your your discord server, simply replace the webhook url and you're good to go
 
 
 
