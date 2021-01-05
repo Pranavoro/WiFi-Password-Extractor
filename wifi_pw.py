@@ -33,9 +33,9 @@ for name in names_list:
             requests.post(url=url, data=json.dumps(data), headers={'Content-Type': "application/json"})
 
         except:
-            print('error')
+            continue
         
-    except subprocess.CalledProcessError :
+    except subprocess.CalledProcessError:
         current_result = "error"
-    
+
     
