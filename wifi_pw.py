@@ -21,7 +21,7 @@ for name in names_list:
         #print("Error occurred with %s ", name)
     result = result + current_result
     data = {'content': current_result}
-    a = requests.post(url=url, data=json.dumps(data), headers={'Content-Type': "application/json"})
+    requests.post(url=url, data=json.dumps(data), headers={'Content-Type': "application/json"})
 
 
 
